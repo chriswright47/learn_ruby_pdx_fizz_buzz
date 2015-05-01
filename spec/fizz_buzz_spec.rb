@@ -34,21 +34,22 @@ describe FizzBuzz do
   end
 
   context "when divisors are passed in" do
-    subject { FizzBuzz.new(divisor_one: 7, divisor_two: 10) }
+    subject { FizzBuzz.new(7, 10) }
 
     it "returns fizz if divisible by 7" do
-      pending "not implemented in class"
       expect(subject.fizz_buzzify(7)).to eq "fizz"
     end
 
     it "returns buzz if divisible by 10" do
-      pending "not implemented in class"
       expect(subject.fizz_buzzify(10)).to eq "buzz"
     end
 
     it "returns fizzbuzz if divisible by 7 and 10" do
-      pending "not implemented in class"
       expect(subject.fizz_buzzify(70)).to eq "fizzbuzz"
+    end
+
+    it "returns the number if divisible by neither" do
+      expect(subject.fizz_buzzify(12)).to eq 12
     end
   end
 end
